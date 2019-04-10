@@ -25,6 +25,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+include: ['_pages']
+
 # Exclude from processing.
 exclude:
   - README.md
