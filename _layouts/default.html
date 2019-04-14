@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}"  class="h-100">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
 
-  <body class="d-flex flex-column h-100 {{ page.body_class }}">
+  <body class="{{ page.body_class }}">
 
     {% include header.html %}
 
-    <main role="main" class="flex-shrink-0">
+    <main role="main">
       {{ content }}
     </main>
 

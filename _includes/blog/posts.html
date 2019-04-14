@@ -3,24 +3,31 @@
 {% assign title = include.title | default: "Latest Articles" %}
 {% assign rss = include.rss | default: true %}
 
-<div class="blog-posts">
-    <div class="container">
-        {% if rss %}
-            <a class="rss-link" href="{{ "/feed.xml" | relative_url }}" target="_blank" aria-label="Subscribe via RSS">
-                <i class="fas fa-rss-square fa-lg" title="Subscribe via RSS" aria-hidden="true"></i>
-            </a>
-        {% endif %}
-        {% if title %}
-            <h2>{{ title }}</h2>
-        {% endif %}
-        <hr class="featurette-divider"/>
-        {% if posts.size > 0 %}
-            {% for post in posts %}
-                {% include blog/post-preview.html post=post index=forloop.index0 %}
-                <hr class="featurette-divider"/>
-            {% endfor %}
-        {% else %}
-            <p>Nothing here yet...</p>
+<div class="container">
+    <div class="page-section">
+        <div class="page-heading">
+            {% if rss %}
+                <a class="rss-link" href="{{ "/feed.xml" | relative_url }}" target="_blank" aria-label="Subscribe via RSS">
+                    <i class="fas fa-rss-square fa-lg" title="Subscribe via RSS" aria-hidden="true"></i>
+                </a>
+            {% endif %}
+            {% if title %}
+                <h2>{{ title }}</h2>
+            {% endif %}
+        </div>
+
+        <div class="blog-posts">
+            {% if posts.size > 0 %}
+                {% for post in posts %}
+                    {% include blog/post-preview.html post=post index=forloop.index0 %}
+                {% endfor %}
+            {% else %}
+                <p class="empty-results">Nothing here yet...</p>
+            {% endif %}
+        </div>
+        
+        {% if include.section_footer %}
+            {{ section_footer }}
         {% endif %}
     </div>
 </div>

@@ -1,0 +1,47 @@
+
+html, body {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	
+	& > header {
+
+	}
+	
+	& > main {
+		flex-shrink: 0;
+		padding-top: 56px;
+		padding-bottom: 150px;
+	}
+	
+	& > footer {
+		margin-top: auto;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+}
+
+.page-section {
+	margin-top: 50px;
+
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+}
+.page-heading {
+	padding: 40px 20px;
+	text-align: center;
+}
+.page-title {
+	
+}
+.page-content {
+	padding: 20px;
+}
+
+
+

@@ -2,19 +2,23 @@
 layout: default
 ---
 <div class="container">
-  <article class="post">
+  <article class="page-section">
   
       {% if page.heading != false %}
       {% if page.title or page.heading %}
-          <header class="post-header">
-            <h1 class="post-title">
-                {% if page.heading %}{{ page.heading | escape }}{% else %}{{ page.title | escape }}{% endif %}
+          <header class="page-heading">
+            <h1 class="page-title">
+                {%- if page.heading -%}
+                    {{ page.heading | escape }}
+                {%- else -%}
+                    {{ page.title | escape }}
+                {%- endif -%}
             </h1>
           </header>
       {% endif %}
       {% endif %}
     
-      <div class="post-content">
+      <div class="page-content">
         {{ content }}
       </div>
   

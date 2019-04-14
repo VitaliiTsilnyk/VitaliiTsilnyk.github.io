@@ -6,5 +6,9 @@ draft: true
 ---
 
 {% assign posts = paginator.posts %}
-{% include blog/posts.html posts=posts %}
-{% include pagination-buttons.html %}
+{% capture section_footer %}
+    <div class="page-content">
+        {% include pagination-buttons.html %}
+    </div>
+{% endcapture %}
+{% include blog/posts.html posts=posts section_footer=section_footer %}

@@ -1,0 +1,25 @@
+
+
+.post-preview {
+	.post-info {
+		padding: 10px 20px;
+	}
+	.post-image {
+		overflow: hidden;
+
+		img {
+			transition: all 1s cubic-bezier(.2,.3,0,1);
+		}
+	}
+	
+	:hover {
+		.post-image {
+			img {
+				transform: scale(1.2);
+			}
+		}
+		.post-title {
+			color: $link-hover-color;
+		}
+	}
+}

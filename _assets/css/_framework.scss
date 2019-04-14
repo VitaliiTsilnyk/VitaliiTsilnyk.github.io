@@ -1,11 +1,27 @@
 
+
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 850px
+);
+
 // Bootstrap 4
 // https://getbootstrap.com/docs/4.0/getting-started/theming/
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
+
+@import "~bootstrap/scss/root";
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/code";
@@ -42,7 +58,19 @@
 // Font Awesome
 // https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import '~@fortawesome/fontawesome-free/scss/variables';
+@import '~@fortawesome/fontawesome-free/scss/mixins';
+@import '~@fortawesome/fontawesome-free/scss/core';
+@import '~@fortawesome/fontawesome-free/scss/larger';
+//@import '~@fortawesome/fontawesome-free/scss/fixed-width';
+@import '~@fortawesome/fontawesome-free/scss/list';
+//@import '~@fortawesome/fontawesome-free/scss/bordered-pulled';
+//@import '~@fortawesome/fontawesome-free/scss/animated';
+//@import '~@fortawesome/fontawesome-free/scss/rotated-flipped';
+//@import '~@fortawesome/fontawesome-free/scss/stacked';
+@import '~@fortawesome/fontawesome-free/scss/icons';
+@import '~@fortawesome/fontawesome-free/scss/screen-reader';
+
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 

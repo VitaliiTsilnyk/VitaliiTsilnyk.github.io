@@ -24,9 +24,11 @@ personal_info:
 
 {%- if site.posts.size > 0 -%}
   {% assign posts = site.posts %}
-  {% include blog/posts.html posts=posts %}
+  {% capture section_footer %}
+    <div class="page-content text-center">
+      <a href="{{ "/blog/" | relative_url }}" class="btn btn-outline-secondary my-2">Read More</a>
+    </div>
+  {% endcapture %}
+  {% include blog/posts.html posts=posts section_footer=section_footer %}
 
-  <div class="text-center">
-    <a href="{{ "/blog/" | relative_url }}" class="btn btn-outline-secondary my-2">Read More</a>
-  </div>
 {%- endif -%}

@@ -1,0 +1,33 @@
+
+
+@import "blog/index";
+@import "blog/post";
+@import "blog/post-preview";
+
+
+.post-date {
+	color: #a1a1a7;
+	font-size: 0.77778rem;
+	letter-spacing: 2px;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+.post-tags {
+	color: #a1a1a7;
+	font-size: 0.85rem;
+}
+
+.post-link,
+.post-link:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+.rss-link {
+	float: right;
+	padding-top: 10px;
+	color: #d6d6d6;
+}
+

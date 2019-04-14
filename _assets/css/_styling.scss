@@ -1,0 +1,20 @@
+
+
+// Styling
+body {
+	background: url("../img/background.jpg");
+	
+	> footer {
+		text-align: center;
+
+		.copyright {
+			color: $text-muted;
+		}
+	}
+}
+
+.page-section {
+	background: white;
+	border: 1px solid #EEE;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

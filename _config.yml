@@ -13,6 +13,7 @@ title: Vitalii Tsilnyk
 description: ~
 header_pages:
   - blog/index.html
+  - projects.html
   - about.html
   - contact.html
 head_assets:
@@ -32,7 +33,6 @@ contacts:
 # External services
 google_analytics: ~
 disqus:
-  enabled: true
   shortname: ~
 formcarry:
     form_key: q3VGtpycXUQ

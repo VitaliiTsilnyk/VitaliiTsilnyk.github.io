@@ -1,0 +1,10 @@
+
+.blog-posts {
+	.post-preview {
+		border-bottom: 1px solid #EEE;
+		
+		&:first-child {
+			border-top: 1px solid #EEE;
+		}
+	}
+}
