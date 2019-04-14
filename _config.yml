@@ -10,30 +10,67 @@
 
 # Site settings
 title: Vitalii Tsilnyk
-#email: 
-description: >- # this means to ignore newlines until "baseurl:"
-  Test site
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  VitaliiTsilnyk
+description: ~
+header_pages:
+  - blog/index.html
+  - about.html
+  - contact.html
+head_assets:
+  css:
+      - '/assets/vendor.bundle.css'
+      - '/assets/app.bundle.css'
+  js:
+      - '/assets/vendor.bundle.js'
+      - '/assets/app.bundle.js'
+
+# Contacts
+contacts:
+  email: ~
+  github_username: VitaliiTsilnyk
+  keybase_username: vitaly_zilnik
+
+# External services
+google_analytics: ~
+disqus:
+  enabled: true
+  shortname: ~
+formcarry:
+    form_key: q3VGtpycXUQ
+
+# Blog settings
+show_excerpts: true
+#excerpt_separator: <!--more-->
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:categories/:title/
 
 # Build settings
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 markdown: kramdown
 #theme: minima
+paginate: 1
+paginate_path: "/blog/page:num/"
+
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
 
-include: ['_pages']
-
-# Exclude from processing.
 exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+ - .idea/
+ - README.md
+ - Gemfile
+ - Gemfile.lock
+ - node_modules
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
+ - package.json
+ - package-lock.json
+ - postcss.config.js
+ - webpack.config.js

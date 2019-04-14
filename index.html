@@ -1,0 +1,32 @@
+---
+layout: default
+permalink: /
+body_class: home
+personal_info:
+  name: Vitalii Tsilnyk
+  #photo: https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg
+  roles:
+    - a software architect
+    - a web developer
+    - a game developer
+    - a team lead
+    - a contributor
+    - an entrepreneur
+    - a consultant
+    - a mentor
+  bio: >-
+    I live in a beautiful city Kiev in Ukraine. <br/>
+    It’s nice to meet you!
+---
+
+
+{% include welcome.html %}
+
+{%- if site.posts.size > 0 -%}
+  {% assign posts = site.posts %}
+  {% include blog/posts.html posts=posts %}
+
+  <div class="text-center">
+    <a href="{{ "/blog/" | relative_url }}" class="btn btn-outline-secondary my-2">Read More</a>
+  </div>
+{%- endif -%}

@@ -1,0 +1,31 @@
+{
+  "name": "VitaliiTsilnyk.github.io",
+  "author": "Vitalii Tsilnyk",
+  "license": "ISC",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode=production",
+    "build-dev": "webpack --config webpack.config.js --mode=development",
+    "watch": "webpack --config webpack.config.js --mode=development --watch --progress"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.15.0",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}

@@ -1,0 +1,34 @@
+
+<div class="welcome">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <div class="py-5 text-center">
+                {% if page.personal_info.photo %}
+                    <img class="d-block mx-auto mb-4 rounded-circle img-thumbnail" src="{{ page.personal_info.photo }}" alt="" width="128" height="128"/>
+                {% endif %}
+                <h1 class="jumbotron-heading">Hello!</h1>
+                <p class="lead">
+                    My name is <strong>{{ page.personal_info.name }}</strong> and I am
+                    <strong class="rotate">
+                        {% for role in page.personal_info.roles %}
+                            <span class="rotate-value {% if forloop.index0 == 0 %}current{% endif %}">{{ role }}.</span>
+                        {% endfor %}
+                    </strong>
+                    <br/>
+                    {{ page.personal_info.bio }}
+                </p>
+                <p>
+                    {% assign contact_page = site.pages | where: "path", "contact.html" | first %}
+                    {% if contact_page.draft != true or jekyll.environment == "development" %}
+                    <a href="{{ contact_page.url | relative_url }}" class="btn btn-outline-primary my-2">Contact Me</a>
+                    {% endif %}
+                    
+                    {% assign about_page = site.pages | where: "path", "about.html" | first %}
+                    {% if about_page.draft != true or jekyll.environment == "development" %}
+                        <a href="{{ about_page.url | relative_url }}" class="btn btn-outline-secondary my-2">Read More</a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </section>
+</div>

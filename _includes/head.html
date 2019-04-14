@@ -1,11 +1,33 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+  {% seo %}
+
+  <meta name="turbolinks-cache-control" content="no-cache" />
+
+  {% for path in site.head_assets.css %}
+    {%- assign asset = site.static_files | where: "path", path | first -%}
+    {%- if asset -%}
+    <link rel="stylesheet" href="{{ asset.path | relative_url }}" />
+    {%- endif -%}
+  {% endfor %}
+  {% for path in site.head_assets.js %}
+    {%- assign asset = site.static_files | where: "path", path | first -%}
+    {%- if asset -%}
+      <script src="{{ path | relative_url }}" defer></script>
+    {%- endif -%}
+  {% endfor %}
+
+  {% feed_meta %}
+
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+
+  <!-- Environment:
+  {%- if jekyll.environment == "development" %}development{% endif -%}
+  {%- if jekyll.environment == "production" %}production{% endif -%}
+  -->
 </head>

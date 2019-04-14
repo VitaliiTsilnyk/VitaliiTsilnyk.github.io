@@ -1,0 +1,10 @@
+---
+layout: default
+title: Blog
+body_class: blog
+draft: true
+---
+
+{% assign posts = paginator.posts %}
+{% include blog/posts.html posts=posts %}
+{% include pagination-buttons.html %}
