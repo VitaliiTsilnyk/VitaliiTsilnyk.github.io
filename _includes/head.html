@@ -10,13 +10,13 @@
   {% for path in site.head_assets.css %}
     {%- assign asset = site.static_files | where: "path", path | first -%}
     {%- if asset -%}
-    <link rel="stylesheet" href="{{ asset.path | relative_url }}" />
+    <link rel="stylesheet" href="{{ asset.path | relative_url }}?{{site.time | date: '%s%N'}}" />
     {%- endif -%}
   {% endfor %}
   {% for path in site.head_assets.js %}
     {%- assign asset = site.static_files | where: "path", path | first -%}
     {%- if asset -%}
-      <script src="{{ path | relative_url }}" defer></script>
+      <script src="{{ path | relative_url }}?{{site.time | date: '%s%N'}}" defer></script>
     {%- endif -%}
   {% endfor %}
 
