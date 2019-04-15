@@ -1,5 +1,5 @@
 
-
+//#454d56
 
 $grid-breakpoints: (
 	xs: 0,
@@ -72,5 +72,6 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import '~@fortawesome/fontawesome-free/scss/screen-reader';
 
 @import "~@fortawesome/fontawesome-free/scss/solid";
+//@import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/brands";
 

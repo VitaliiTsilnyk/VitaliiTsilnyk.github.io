@@ -1,10 +1,10 @@
 
 <div class="pagination container">
     {% if paginator.previous_page %}
-        <a class="btn btn-outline-secondary mr-auto" href="{{ paginator.previous_page_path }}">Previous Page</a>
+        <a class="btn btn-outline-secondary mr-auto" href="{{ paginator.previous_page_path }}"><i class="fas fa-chevron-left"></i> Newer posts</a>
     {% endif %}
 
     {% if paginator.next_page %}
-        <a class="btn btn-outline-secondary ml-auto" href="{{ paginator.next_page_path }}">Next Page</a>
+        <a class="btn btn-outline-secondary ml-auto" href="{{ paginator.next_page_path }}">Older posts <i class="fas fa-chevron-right"></i></a>
     {% endif %}
 </div>
