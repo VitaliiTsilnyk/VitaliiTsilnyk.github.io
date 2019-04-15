@@ -6,7 +6,7 @@ layout: default
   
       {% if page.heading != false %}
       {% if page.title or page.heading %}
-          <header class="page-heading">
+        <header class="page-heading">
             <h1 class="page-title">
                 {%- if page.heading -%}
                     {{ page.heading | escape }}
@@ -14,7 +14,10 @@ layout: default
                     {{ page.title | escape }}
                 {%- endif -%}
             </h1>
-          </header>
+          {% if page.lead %}
+            <p class="lead">{{ page.lead }}</p>
+          {% endif %}
+        </header>
       {% endif %}
       {% endif %}
     
