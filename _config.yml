@@ -39,7 +39,7 @@ formcarry:
 
 # Blog settings
 show_excerpts: true
-#excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->
 
 collections:
   posts:

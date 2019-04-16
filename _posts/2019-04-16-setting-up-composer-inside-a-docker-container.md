@@ -8,6 +8,8 @@ image:  /images/docker-compose-composer.png
 
 A simple way to have properly working Composer inside your Docker container (plus a nice bonus at the end).
 
+<!--more-->
+
 Usually when you put your PHP installation into Docker, you don't want to keep your Composer around in your system any more. You want to put it into Docker too.
 
 There are some Composer images for Docker available out there but they run Composer in a separate container. Running it like that is the same as running Composer and your code on different systems, it makes the setup inconsistent and probably even broken since Composer checks your PHP version, installed extensions and may execute additional scripts, which may not affect the other container.
