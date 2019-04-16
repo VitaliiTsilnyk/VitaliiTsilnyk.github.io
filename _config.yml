@@ -33,7 +33,7 @@ contacts:
 # External services
 google_analytics: ~
 disqus:
-  shortname: ~
+  shortname: vitalii-tsilnyk-blog
 formcarry:
     form_key: q3VGtpycXUQ
 
