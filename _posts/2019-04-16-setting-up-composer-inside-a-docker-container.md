@@ -46,7 +46,7 @@ RUN wget https://getcomposer.org/installer -O - -q | php -- --quiet && \
 
 That's it! Now you can bring your container up as usual, log into it and execute any composer commands like you used to do on your own system.
 
-If you use [Docker Compose](https://docs.docker.com/compose/), it becomes very easy to run Composer without having to log into the running container, simply execute `docker-compose exec YOUR_PHP_SERVICE_NAME composer --version` and you should get the version of the installed Composer instance.
+If you use [Docker Compose](https://docs.docker.com/compose/){:target="_blank"}, it becomes very easy to run Composer without having to log into the running container, simply execute `docker-compose exec YOUR_PHP_SERVICE_NAME composer --version` and you should get the version of the installed Composer instance.
 
 Now one more thing: your composer commands will run under the container's `root` user, which is not a right thing to do even inside the container. But it's easy to fix by adding `--user www-data` argument to your `docker-compose exec` command.
 
