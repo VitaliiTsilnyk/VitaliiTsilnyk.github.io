@@ -2,8 +2,37 @@
 
 @import "components/highlight/monokai.css";
 
-.highlight {
-	padding: 10px;
+blockquote.filename {
+	margin-bottom: 0;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 2px solid #c5c5c5;
+	border-bottom: none;
+	font-family: $font-family-monospace;
+	background: #f5f5f5;
+	
+	p {
+		margin: 0;
+		padding: 0 10px;
+	}
+}
+
+div.highlight {
 	border-radius: 5px;
 	border: 2px solid #c5c5c5;
+	margin-bottom: 1rem;
+
+	pre.highlight {
+		padding: 10px;
+		margin-bottom: 0;
+	}
 }
+
+blockquote.filename + div {
+	div.highlight {
+		border-top: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+

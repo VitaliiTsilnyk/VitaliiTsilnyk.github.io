@@ -18,6 +18,13 @@ body_class: post
     </header>
   
     <div class="page-content" itemprop="articleBody">
+      
+      {% if page.image %}
+        <div class="post-image">
+          <img class="img-fluid" src="{{ page.image | relative_url }}" alt=""/>
+        </div>
+      {% endif %}
+      
       {{ content }}
     </div>
   </article>

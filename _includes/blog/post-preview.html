@@ -9,7 +9,9 @@
         <div class="row">
             <div class="col-md-5 {% if mod > 0 %}order-md-2{% endif %}">
                 <div class="post-image">
-                    <img class="img-fluid mx-auto" src="https://dummyimage.com/600x400/aaa/000.jpg" alt=""/>
+                    {% if post.image %}
+                        <img class="img-fluid mx-auto" src="{{ post.image | relative_url }}" alt=""/>
+                    {% endif %}
                 </div>
             </div>
             <div class="col-md-7 {% if mod > 0 %}order-md-1{% endif %}">
@@ -18,7 +20,7 @@
                     <div class="post-date">{{ post.date | date: date_format }}</div>
             
                     {%- if site.show_excerpts -%}
-                        <p class="lead">{{ post.excerpt }}</p>
+                        <div class="post-excerpt">{{ post.excerpt }}</div>
                     {%- endif -%}
                     
                     {%- if post.tags.size > 0 -%}

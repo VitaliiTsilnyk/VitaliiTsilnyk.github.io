@@ -3,11 +3,16 @@
 .post-preview {
 	.post-info {
 		padding: 10px 20px;
+		
+		.post-excerpt {
+			padding-top: 10px;
+		}
 	}
 	.post-image {
 		overflow: hidden;
 
 		img {
+			opacity: 0.75;
 			transition: all 1s cubic-bezier(.2,.3,0,1);
 		}
 	}
@@ -15,6 +20,7 @@
 	:hover {
 		.post-image {
 			img {
+				opacity: 1;
 				transform: scale(1.2);
 			}
 		}

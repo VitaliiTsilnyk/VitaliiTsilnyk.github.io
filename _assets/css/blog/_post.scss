@@ -6,5 +6,20 @@
 		&:first-child {
 			border-top: 1px solid #EEE;
 		}
+		
+		.post-tags {
+			margin-bottom: 0;
+		}
 	}
+}
+
+article.post {
+	.post-image {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+#disqus_thread {
+	margin: 20px;
 }
